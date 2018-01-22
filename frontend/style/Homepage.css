@@ -1,0 +1,19 @@
+.customNavbar {
+background-color: rgb(57, 19, 65);
+
+}
+
+.customNav {
+    background-color: rgba(63, 59, 59, 0.112)
+}
+
+
+.back {
+    background-image: url("../assets/night-lights-hd-wallpaper-3.jpg");
+    background-size: cover;
+    height: 800px;
+    
+}
+.opaq {
+    
+}
