@@ -1,19 +1,39 @@
 .customNavbar {
-background-color: rgb(57, 19, 65);
+background-color: rgb(88, 7, 106);
+
 
 }
 
 .customNav {
-    background-color: rgba(63, 59, 59, 0.112)
+    background-color: rgba(145, 34, 34, 0.112)
 }
 
 
 .back {
-    background-image: url("../assets/night-lights-hd-wallpaper-3.jpg");
+    background-image: url("https://i.imgur.com/X3CPUeT.jpg");
     background-size: cover;
     height: 800px;
     
 }
-.opaq {
-    
+
+
+.boxWidth {
+    width: 450px;
+}
+
+.posn{
+    position: absolute;
+    top: 200px;
+    right: 60px;
+    opacity: 0.5;
+}
+
+.displayMode {
+    width: 400px;
+    display: flex;
+    flex-shrink: initial;
+}
+
+.posnOfIntro{
+    top: 700px;
 }
