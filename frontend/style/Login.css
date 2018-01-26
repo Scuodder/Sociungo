@@ -1,14 +1,14 @@
 .customNavbar {
-background-color: rgb(88, 7, 106);
 
-
+background-image: url("http://www.powerpointhintergrund.com/uploads/2017/06/navy-blue-backgrounds-wallpaper-cave-14.jpeg");
+background-size: cover;
 }
 
 .customNav {
     background-color: rgba(145, 34, 34, 0.112)
 }
 
-
+/* */
 .back {
     background-image: url("https://i.imgur.com/X3CPUeT.jpg");
     background-size: cover;
@@ -36,4 +36,10 @@ background-color: rgb(88, 7, 106);
 
 .posnOfIntro{
     top: 700px;
+}
+
+/* spacing of footer text from left */
+.spacing {
+    position: absolute;
+    left: 10px;
 }
