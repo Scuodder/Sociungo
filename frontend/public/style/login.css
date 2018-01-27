@@ -10,22 +10,22 @@ background-size: cover;
 
 /* */
 .back {
-    background-image: url("https://i.imgur.com/X3CPUeT.jpg");
+    background-image: url("http://i.imgur.com/0uRqK.jpg");
     background-size: cover;
     height: 800px;
-    
+  
 }
-
-
+/*  http://i.imgur.com/0uRqK.jpg */
+/* https://i.imgur.com/X3CPUeT.jpg */
 .boxWidth {
     width: 450px;
 }
 
 .posn{
     position: absolute;
-    top: 200px;
+    top: 210px;
     right: 60px;
-    opacity: 0.5;
+    
 }
 
 .displayMode {
@@ -41,5 +41,12 @@ background-size: cover;
 /* spacing of footer text from left */
 .spacing {
     position: absolute;
-    left: 10px;
+    left: 20px;
+}
+ 
+/* spacing of right in footer from right */
+.spacing2 {
+    position: absolute;
+    right : 20px;
+    
 }
