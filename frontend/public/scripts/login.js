@@ -4,9 +4,9 @@ $(function(){
     
   
     createAccn.click(function(){
-    $.get('/createAccount', function(data){
-        window.location.replace(window.location.href + 'createAccount')
-    })
+    
+        window.open(window.location.href + 'cr/createAccount','_self')
+    
   })
 }
   

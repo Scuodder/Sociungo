@@ -18,7 +18,7 @@ app.use('/', express.static(__dirname + '/frontend/public'))
 
 
 // requesting create account page ---------->
-app.use('/', route)
+app.use('/cr', route)
 
 
 
