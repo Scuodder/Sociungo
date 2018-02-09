@@ -1,18 +1,25 @@
 .navyBlue {
 
-background-image: url(" https://www.desktop-background.com/download/o/2011/04/27/194522_2560x1440-yankees-blue-solid-color-background-jpg_2560x1440_h.jpg");
+background-image: url(" https://www.xmple.com/wallpaper/plain-one-colour-single-blue-solid-color-1920x1080-c-0d0f16-f-24.svg");
 background-size: cover;
+}
+.navyBlue1 {
+    background-image: url(" https://www.xmple.com/wallpaper/plain-one-colour-single-blue-solid-color-1920x1080-c-0d0f16-f-24.svg");
+    background-size: cover;
 }
 
 /* */
 .back {
-    background-image: url("http://i.imgur.com/0uRqK.jpg");
-    background-size: cover;
+    background-image: url("http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg");
+
+   background-size: cover;
     height: 800px;
   
 }
 /*  http://i.imgur.com/0uRqK.jpg */
-/* https://i.imgur.com/X3CPUeT.jpg */
+/* https://i.imgur.com/X3CPUeT.jpg 
+http://www.desktopimages.org/preview/get_photo/372503/2560/1600
+*/
 .boxWidth {
     width: 450px;
 }
@@ -21,9 +28,15 @@ background-size: cover;
     position: absolute;
     top: 210px;
     right: 60px;
-    opacity: 1;
+    opacity: 0.5;
+    backface-visibility: visible;
+
+    
     
 }
+/* .posn:hover {
+    transition: opacity 1 ;
+} */
 
 .displayMode {
     width: 400px;
@@ -33,17 +46,4 @@ background-size: cover;
 
 .posnOfIntro{
     top: 700px;
-}
-
-/* spacing of footer text from left */
-.spacing {
-    position: absolute;
-    left: 20px;
-}
- 
-/* spacing of right in footer from right */
-.spacing2 {
-    position: absolute;
-    right : 20px;
-    
 }

@@ -25,3 +25,17 @@ html {
     background-image: url("https://www.desktop-background.com/download/o/2011/04/27/194522_2560x1440-yankees-blue-solid-color-background-jpg_2560x1440_h.jpg");
     background-size: cover;
 }
+
+
+/* spacing of footer text from left */
+.spacing {
+  position: absolute;
+  left: 20px;
+}
+
+/* spacing of right in footer from right */
+.spacing2 {
+  position: absolute;
+  right : 20px;
+  
+}
