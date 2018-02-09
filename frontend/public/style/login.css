@@ -28,15 +28,21 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
     position: absolute;
     top: 210px;
     right: 60px;
-    opacity: 0.5;
+   
     backface-visibility: visible;
-
-    
-    
 }
-/* .posn:hover {
-    transition: opacity 1 ;
-} */
+
+#loginBox {
+    opacity: 0.3;
+    transition: opacity 1s; 
+}
+ 
+#loginBox:hover {
+  
+  opacity: 0.6;
+  
+   
+} 
 
 .displayMode {
     width: 400px;
