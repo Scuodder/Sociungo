@@ -16,15 +16,16 @@ $(function(){
 }
 
     function processNews(data) {
-        let noOfResults = data.totalResults;
-        let i = random(0, noOfResults)
+        let noOfResults = data.totalResults,
+        i = random(0, noOfResults),
+        title = data.articles[i].title,
+        description  =  data.articles[i].description,
+        source = data.articles[i].source.name,
+        author = data.articles[i].author,
+        site = data.articles[i].url,
+        image = data.articles[i].urlToImage;
+
         
-        let title = data.articles[i].title;
-        let description  =  data.articles[i].description;
-        let source = data.articles[i].source.name;
-        let author = data.articles[i].author;
-        let site = data.articles[i].url;
-        let image = data.articles[i].urlToImage ;
         if(author===null) author = 'unknown';
         if(description===null) description = "";
         
