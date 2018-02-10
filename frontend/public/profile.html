@@ -48,30 +48,35 @@
         
     </nav>
     
-    
+    <!-- Dynamic Page -->
     <div class="container-fluid">
         
         <div class="row mt-5">
             
             <div class="col-7  m-3 p-2" id = "dynamicPage">
                 
-                <!-- <div class="row">
-                    <div class="col-12 mt-3 ml-3 mr-3 mb-0 p-2">
-                        <div class="jumbotron jumbotron-fluid foot ">
-                            <div class="container">
-                                <h1 class="display-4 text-light " >Home</h1>
-                                 <p class="lead text-light">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> 
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+              
                 <div class="row">
                     
                     <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2"> 
                         <div class="jumbotron jumbotron-fluid  ">
                             <div class="container">
                                 <h1 class="display-4  " >Status</h1>
-                                <p class="lead ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                                <div id="status">
+                                    <p class="lead" >Add your status</p>
+                                </div>
+                                
+                                <div class="input-group ">
+                                    <div class="input-group-prepend" id="changeStatusButton">
+                                        <button class="btn btn-primary" >Add status</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
+                                   
+
+                                </div>   
+                                
+                                
+                               
                             </div>
                         </div>
                     </div>
@@ -92,7 +97,7 @@
                     </div>
             </div>
             
-            
+            <!--News  -->
             
             <div class="col-4">
                 <div class=" m-3 p-2 ">
@@ -140,10 +145,10 @@
     
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-    <script src="/scripts/profile.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
+    <script src="/scripts/profile.js"></script>
+    <script src="/scripts/changeStatus.js"></script>
     
     
 </body>

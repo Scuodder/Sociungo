@@ -7,6 +7,8 @@ $(function(){
     let nHome = $('#nHome');
     let nSettings = $('#nSettings');
 
+   
+
     // get AJAX request to fetch news data when page is loaded .....
     
     $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
@@ -112,6 +114,7 @@ nProfile.click(function() {
 
 
 nHome.click(function() {
+
     dynamicPage.empty();
     dynamicPage.append($(`
     <div class="row">
@@ -119,8 +122,18 @@ nHome.click(function() {
         <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2"> 
             <div class="jumbotron jumbotron-fluid  ">
                 <div class="container">
-                    <h1 class="display-4  " >Status</h1>
-                    <p class="lead ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    <h1 class="display-4">Status</h1>
+                    <div id="status">
+                        <p class="lead" >Add your status</p>
+                    </div>
+                    
+                    <div class="input-group ">
+                                    <div class="input-group-prepend" id="changeStatusButton">
+                                        <button class="btn btn-primary"> Add status</button>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -141,8 +154,9 @@ nHome.click(function() {
     </div>
     
     `))
-})
 
+
+})
 nSettings.click(function() {
     dynamicPage.empty();
     dynamicPage.append($(`
@@ -159,6 +173,11 @@ nSettings.click(function() {
     
     `))
 })
+
+
+
+
+
 
 
 })
