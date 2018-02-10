@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <!-- Custom style -->
-    <link href="/style/offCanvas.css" rel="stylesheet">
+    
     
     <link rel="stylesheet" href="/style/profile.css">
     <link rel="stylesheet" href="/style/footer.css">
@@ -15,43 +14,132 @@
     
     <title>Profile</title>
 </head>
-<body>
+<body class="back">
+    
+    <!---- --------------- NAVBAR--------------- -->
+    
+    <nav class="navbar navbar-dark foot fixed-top">
+        
+        
+        
+        <a href="/cr/createAccount" class="navbar-brand">
+            <img src="/assets/logo3.png" width="30" height= "30" class="d-inline-block align-top" alt="logo">
+            <span class="text-light">Sociungo</span> <sub><span class="badge badge-info "><span>Beta</span></sub>  
+        </a>
+        
+        <ul class="navbar-nav">
+                <li>Home</li>
+                <li>Profile</li>
+                <li>Settings</li>
+            </ul>
+        
+        <form class="form-inline">
+            <input placeholder="Search" type="search" class="form-control mr-sm-2 " aria-label="Search"> 
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
+        </form>
+        
+        
+        
+    </nav>
+    
+    
+    <div class="container-fluid">
+        
+        <div class="row mt-5">
+            
+            <div class="col-7  m-3 p-2">
+                
+                <!-- <div class="row">
+                    <div class="col-12 mt-3 ml-3 mr-3 mb-0 p-2">
+                        <div class="jumbotron jumbotron-fluid foot ">
+                            <div class="container">
+                                <h1 class="display-4 text-light " >Home</h1>
+                                 <p class="lead text-light">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    
+                    <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2"> 
+                        <div class="jumbotron jumbotron-fluid  ">
+                            <div class="container">
+                                <h1 class="display-4  " >Status</h1>
+                                <p class="lead ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
 
-<!---- --------------- NAVBAR--------------- -->
-
-<nav class="nav navbar-dark bg-dark justify-content-between">
-    <a href="#" class="navbar-brand">Sociungo</a>
-
-
-    <form class="form-inline">
-        <input placeholder="Search" type="search" class="form-control mr-sm-2 " aria-label="Search"> 
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
-    </form>
-</nav>
-
-
-
-      <footer class="footer navyBlue">
-  
+                <div class="row">
+                    
+                        <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
+                            <div class="jumbotron jumbotron-fluid  ">
+                                <div class="container">
+                                    <h1 class="display-4  " >Feed</h1>
+                                    <p class="lead ">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+            </div>
+            
+            
+            
+            <div class="col-4">
+                <div class=" m-3 p-2 ">
+                    <span class="badge badge-primary">Friends</span>
+                    <span class="badge badge-success">Groups</span>
+                    <span class="badge badge-warning">Followers</span>
+                    
+                </div>
+                
+                
+                <div class=" m-3 p-2">
+                    
+                    <div class="jumbotron jumbotron-fluid " id="news">
+                        <div class="container">
+                            <span class="display-4">News</span> <a href="https://newsapi.org/"class="badge badge-danger">News API</a> 
+                            <br><a href ="#" id="post_fetch" class="badge badge-success">Next</a>
+                            
+                            <div id="contain"></div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        
+    </div>
+    
+    
+    
+    <footer class="footer foot">
+        
         <span class=" text-light spacing">
-           Sociungo &copy;  2018 All rights reserved. 
-           
-           
+            Sociungo &copy;  2018 <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" class="badge badge-danger ">GPL-3.0</a> 
+            
+            
         </span>
         <span class="spacing2">
-          <button class="btn btn-bg btn-outline-success ">Contact</button>
-        
+            <button class="btn btn-bg btn-outline-info ">Contact</button>
+            
         </span>
-    
+        
     </footer>
     
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
-
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="/scripts/profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    
 </body>
 
 </html>
