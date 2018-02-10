@@ -7,21 +7,18 @@ $(function(){
     let nHome = $('#nHome');
     let nSettings = $('#nSettings');
 
-   
+   // random number generator
+   function random (min, max) {
+            
+    mi = Math.ceil(min);
+    ma = Math.floor(max);
+    return Math.floor(Math.random() * (ma - mi)) + mi;
+}
 
     // get AJAX request to fetch news data when page is loaded .....
     
     $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
     console.log(data);
-    
-    
-    // random number generator
-    function random (min, max) {
-        
-        mi = Math.ceil(min);
-        ma = Math.floor(max);
-        return Math.floor(Math.random() * (ma - mi)) + mi;
-    }
     
     let noOfResults = data.totalResults;
     let i = random(0, noOfResults)
@@ -35,7 +32,7 @@ $(function(){
     if(author===null) author = 'unknown';
     if(description===null) description = "";
     
-    
+    contain.empty();
     contain.append($(`
     
     <img src=${image} class = "rounded p-2 " width="370px" alt="" ></img>
@@ -57,15 +54,6 @@ next.click(function(){
     $.post("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", {}, function(data) {
         console.log(data);
     
-    
-        // random number generator
-        function random (min, max) {
-            
-            mi = Math.ceil(min);
-            ma = Math.floor(max);
-            return Math.floor(Math.random() * (ma - mi)) + mi;
-        }
-        
         let noOfResults = data.totalResults;
         let i = random(0, noOfResults)
         
