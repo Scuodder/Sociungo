@@ -15,45 +15,7 @@ $(function(){
     return Math.floor(Math.random() * (ma - mi)) + mi;
 }
 
-    // get AJAX request to fetch news data when page is loaded .....
-    
-    $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
-    console.log(data);
-    
-    let noOfResults = data.totalResults;
-    let i = random(0, noOfResults)
-    
-    let title = data.articles[i].title;
-    let description  =  data.articles[i].description;
-    let source = data.articles[i].source.name;
-    let author = data.articles[i].author;
-    let site = data.articles[i].url;
-    let image = data.articles[i].urlToImage ;
-    if(author===null) author = 'unknown';
-    if(description===null) description = "";
-    
-    contain.empty();
-    contain.append($(`
-    
-    <img src=${image} class = "rounded p-2 " width="370px" alt="" ></img>
-    <h4 class="p-2">${title}</h4>
-    <p class="lead p-2" >${description}</p> 
-    <span class="p-2"> #Source-${source}</span> <br>
-    <span class="p-2"> #Author-${author}</span> <br>
-    <a href=${site} class="p-2">Visit</a> 
-    
-    `))
-    
-})
-
-
-
-// post Ajax request to fetch data without reloading...
-next.click(function(){
-
-    $.post("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", {}, function(data) {
-        console.log(data);
-    
+    function processNews(data) {
         let noOfResults = data.totalResults;
         let i = random(0, noOfResults)
         
@@ -77,8 +39,26 @@ next.click(function(){
         <a href=${site} class="p-2">Visit</a> 
         
         `))
-        
+    }
+
+    // get AJAX request to fetch news data when page is loaded .....
     
+    $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
+    console.log(data);
+    processNews(data);    
+
+    
+})
+
+
+
+// post Ajax request to fetch data without reloading...
+next.click(function(){
+
+    $.post("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", {}, function(data) {
+        console.log(data);
+        processNews(data);
+        
 })
 })
 
