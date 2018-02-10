@@ -10,8 +10,8 @@ $(function(){
    // random number generator
    function random (min, max) {
             
-    mi = Math.ceil(min);
-    ma = Math.floor(max);
+    let mi = Math.ceil(min);
+    let ma = Math.floor(max);
     return Math.floor(Math.random() * (ma - mi)) + mi;
 }
 
@@ -25,7 +25,7 @@ $(function(){
         site = data.articles[i].url,
         image = data.articles[i].urlToImage;
 
-        
+
         if(author===null) author = 'unknown';
         if(description===null) description = "";
         
@@ -45,7 +45,7 @@ $(function(){
     // get AJAX request to fetch news data when page is loaded .....
     
     $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
-    console.log(data);
+   
     processNews(data);    
 
     
@@ -57,7 +57,7 @@ $(function(){
 next.click(function(){
 
     $.post("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", {}, function(data) {
-        console.log(data);
+      
         processNews(data);
         
 })
