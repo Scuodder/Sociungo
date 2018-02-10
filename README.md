@@ -1,2 +1,2 @@
 # A Social Networking Website - Sociungo
-## Coming #### soon ##### ... ###### ..
+### Coming soon.....
