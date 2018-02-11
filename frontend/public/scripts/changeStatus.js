@@ -1,3 +1,4 @@
+// used in profile.js
 $(function() {
     
 function changeStatus(){

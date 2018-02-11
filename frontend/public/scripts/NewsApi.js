@@ -1,4 +1,4 @@
-
+//  used in profile.js
     // random number generator
    function random (min, max) {
             
