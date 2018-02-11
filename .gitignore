@@ -4,3 +4,4 @@ package-lock.json
 .DS_Store
 frontend/.DS_Store
 checkList
+data
