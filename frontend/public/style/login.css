@@ -39,16 +39,20 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
 }
 
 #loginBox {
-    opacity: 0.4;
+    opacity: 0.5;
     transition: opacity 1s; 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.534);
+    background-color: rgba(105, 3, 66, 0.911);
+    border-radius: 80px 80px 80px 80px;
 }
  
-#loginBox:hover {
+#loginBox:hover , #loginBox:focus-within {
   
-  opacity: 0.65;
-  
-   
+  opacity: 0.9;
+ 
 } 
+
+
 
 .displayMode {
     width: 400px;
@@ -75,7 +79,7 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
     height : 100%;
     width : 100% ;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6) ;
+    background-color: rgba(2, 3, 5, 0.7) ;
   
     animation-name: modalOpen ; 
     animation-duration: 1s ;
@@ -84,16 +88,15 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
 
 .modal-contentX {
    
-    background-color:rgb(65, 92, 107);
+    background-color:rgb(192, 222, 228);
     margin : 10% auto ; 
-   
-    width : 50%; 
+     width : 50%; 
     box-shadow: 0px 0px 700px black;
- 
+    border-radius: 25px;
 }
 
 .closeBtn {
-    color : rgb(143, 173, 194) ; 
+    color : rgb(190, 204, 214) ; 
     float : right ; 
     font-size: 30px;
     margin-right: 17px;
@@ -120,8 +123,23 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
  }
 }
 
+.modal-headerX {
+    padding : 15px;
+    margin-bottom: 20px;
+    background: hsl(208, 96%, 10%);
+    box-shadow:0px 0px 10px rgba(27, 26, 26, 0.781) ;
+    border-radius: 25px 25px 0px 0px;
+}
+.modal-bodyX {
+    padding: 10px 20px;
+}
 
+.modal-footerX {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: hsl(208, 96%, 10%);
+    box-shadow: 0px 0px 100px rgba(27, 26, 26, 0.781) ;
+    border-radius: 0px 0px 25px 25px ;
+}
 
-
-/* source : Traversy Media https://youtu.be/6ophW7Ask_0 */
 /* MODAL Component ends here */
