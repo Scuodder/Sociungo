@@ -1,6 +1,6 @@
 const route = require('express').Router()
 
-route.get('/createAccount', function(req, res) {
+route.get('/loginAccn', function(req, res) {
     
     res.render('profile.html')
 })

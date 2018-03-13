@@ -1,14 +1,14 @@
 // create a new account
 $(function(){
+    let signIn = $('#signIn')
     let createAccn = $('#createAccn')
-    
   
-    createAccn.click(function(){
+    // signIN
+    signIn.click(function(){
     
-        window.open(window.location.href + 'cr/createAccount','_self')
+        window.open(window.location.href + 'cr/loginAccn','_self')
+    })
+
     
-  })
-}
-  
-  
-)
+
+})

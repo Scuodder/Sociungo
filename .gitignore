@@ -1,7 +1,8 @@
 node_modules
-package-lock.json
+
 .idea
 .DS_Store
 frontend/.DS_Store
 checkList
 data
+temp

@@ -10,14 +10,20 @@ background-size: cover;
 
 /* */
 .back {
-    background-image: url("http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg");
+    background-image: url("https://99px.ru/sstorage/53/2016/04/tmb_161974_9398.jpg");
 
    background-size: cover;
     height: 800px;
   
 }
+.modalBack {
+    background-image: url("http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg");
+
+    background-size: cover;
+}
 /*  http://i.imgur.com/0uRqK.jpg */
 /* https://i.imgur.com/X3CPUeT.jpg 
+http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg
 http://www.desktopimages.org/preview/get_photo/372503/2560/1600
 */
 .boxWidth {
@@ -53,3 +59,69 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
 .posnOfIntro{
     top: 700px;
 }
+
+
+
+
+
+
+/* MODAL BEGINS */
+.modalX {
+    display : none ;
+    position: fixed;
+    z-index: 1;
+    left : 0 ;
+    top : 0 ;
+    height : 100%;
+    width : 100% ;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6) ;
+  
+    animation-name: modalOpen ; 
+    animation-duration: 1s ;
+}
+
+
+.modal-contentX {
+   
+    background-color:rgb(65, 92, 107);
+    margin : 10% auto ; 
+   
+    width : 50%; 
+    box-shadow: 0px 0px 700px black;
+ 
+}
+
+.closeBtn {
+    color : rgb(143, 173, 194) ; 
+    float : right ; 
+    font-size: 30px;
+    margin-right: 17px;
+     
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: rgb(231, 225, 225) ; 
+    text-decoration : none ;
+    cursor: pointer;
+}
+
+
+
+
+
+@keyframes modalOpen {
+ from {
+     opacity: 0;
+ }
+
+ to {
+    opacity: 1;
+ }
+}
+
+
+
+
+/* source : Traversy Media https://youtu.be/6ophW7Ask_0 */
+/* MODAL Component ends here */

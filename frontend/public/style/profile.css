@@ -1,7 +1,21 @@
 
 
 
-.back{
+.back {
     background-image: url(" http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg");
     background-size: cover;
+}
+
+/* styling the news image that is fetched from the news api */
+.imgStyling {
+    width: 90% ; 
+    margin-top: 30px;
+    margin-left: 9px;
+    margin-bottom: 30px;
+    box-shadow: -1px 1px 40px black;
+    
+}
+
+.textStyling {
+    text-shadow: 0px 0px 0.5px black;
 }

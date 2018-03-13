@@ -18,7 +18,7 @@ $(function(){
 
 
 
-// post Ajax request to fetch data without reloading...
+// post Ajax request to fetch data when next button is clicked...
 next.click(function(){
 
     $.post("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", {}, function(data) {
@@ -63,7 +63,7 @@ nHome.click(function() {
                     
                     <div class="input-group ">
                                     <div class="input-group-prepend" id="changeStatusButton">
-                                        <button class="btn btn-primary"> Add status</button>
+                                        <button class="btn btn-danger"> Add status</button>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
                     </div>

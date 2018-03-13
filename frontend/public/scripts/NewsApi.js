@@ -15,21 +15,26 @@
         source = data.articles[i].source.name,
         author = data.articles[i].author,
         site = data.articles[i].url,
-        image = data.articles[i].urlToImage;
-
+        image = data.articles[i].urlToImage,renderImg;
+        
 
         if(author===null) author = 'unknown';
         if(description===null) description = "";
+        if(image==null) {
+            renderImg =``
+        } else {
+            renderImg = `<img src=${image} class = "rounded imgStyling"  ></img>`
+        }
+
         
         container.empty();
         container.append($(`
-        
-        <img src=${image} class = "rounded p-2 " width="370px" alt="" ></img>
-        <h4 class="p-2">${title}</h4>
-        <p class="lead p-2" >${description}</p> 
+        ${renderImg}
+        <h4 class="p-2 textStyling">${title}</h4>
+        <p class="lead p-2 textStyling" >${description}</p> 
         <span class="p-2"> #Source-${source}</span> <br>
         <span class="p-2"> #Author-${author}</span> <br>
-        <a href=${site} class="p-2">Visit</a> 
+        <a href=${site} class="p-2 textStyling">Visit</a> 
         
         `))
     }
