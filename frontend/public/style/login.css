@@ -30,6 +30,14 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
     width: 450px;
 }
 
+/* create a new sociungo account */
+#introText {
+    float: left;
+    text-align: center;
+}
+
+/*  create a new sociungo account */
+
 .posn{
     position: absolute;
     top: 210px;
@@ -66,7 +74,11 @@ http://www.desktopimages.org/preview/get_photo/372503/2560/1600
 
 
 
+@media (max-width: 600px ) {
 
+    
+
+}
 
 
 /* MODAL BEGINS */
