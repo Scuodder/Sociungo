@@ -4,6 +4,8 @@
 .back {
     background-image: url(" http://kenikin.com/w/dark-blue-Wallpaper-Picture-number-au7.jpg");
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* styling the news image that is fetched from the news api */

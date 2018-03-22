@@ -8,12 +8,15 @@ module.exports = {
             lastName : data.lastName,
             emailAddress : data.emailAddress,
             birthday : data.birthday,
-            password : data.password
+            password : data.password,
+            secretToken : data.secretToken,
+            active : data.active,
            })
 
         newUser.save(function (err) {
             if (err) throw err ;
-            callback();
+            let confirm;
+            callback(confirm);
         })   
     },
 
@@ -27,5 +30,6 @@ module.exports = {
       callback(found)
        
 
-    } 
+    }
+    
 }

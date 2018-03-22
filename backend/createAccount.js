@@ -4,18 +4,12 @@ const route = require('express').Router()
 const {createAccount, existingUser } = require('../database/usersCollection')
 const nodemailer = require('nodemailer');
 const credentials = require('../temp/credentials.js').nodemailerLogin;
-
-
-route.get('/loginAccn', function(req, res) {
-    
-    res.render('profile.html')
-})
-
-
+const randomstring = require('randomstring');
+const PORT = require('../port.js').PORT;
+const User = require('../database/userSchema.js')
 
 
 // create account validation + database entry after confirmation link is clicked by the user 
-
 route.post('/createAccn', [
     check('emailAddress').isEmail().withMessage('Invalid email address'),
     check('firstName').not().isEmpty().withMessage('First name field is empty.'),
@@ -41,7 +35,12 @@ existingUser(req.body, function(found) {
     console.log(found)
     if(!found) {
 
-        
+// calculating random string and active state of the user is false,
+randString = randomstring.generate()
+req.body.secretToken = randString ;
+req.body.active = false ;
+
+
 const document = `
 <h3>Sociungo - Email confirmation</h3>
 <p>Your email was provided for registration on Sociungo.</p>
@@ -51,8 +50,8 @@ const document = `
     <li> Email-address : ${req.body.emailAddress} </li>
     <li> Password : ${req.body.password} </li>
 </ul>
-
-<p>To confirm your email please follow the link: </p>
+<br/>
+To confirm your email please follow the link : <a href="http://localhost:${PORT}/cr/signInAuth/${randString}">http://localhost:${PORT}/cr/signInAuth/${randString}</a>
 `
 
 let transporter = nodemailer.createTransport({
@@ -86,16 +85,9 @@ createAccount(req.body, function (confirmation) {
     confirmation = 'good to go';
     console.log(confirmation)
     res.json({status : '2', message : "confirmation email has been sent to your account"  });
-
 });
-
-
-
 }
-
-)      
-
-       
+)    
     } else {
         res.json({status: '3',
             error : {
@@ -104,16 +96,23 @@ createAccount(req.body, function (confirmation) {
         })
     }
     
-
+})
 })
 
-
-
-
-
-
-})
-
+route.get('/signInAuth/:secretToken', function(req, res, next) {
+    User.findOne({
+        secretToken : req.params.secretToken
+    }, function (err, doc) {
+        if (err) throw err;
+        doc.active = true;
+        doc.secretToken = '';
+        doc.save(function(err) {
+            if (err) throw err;
+            res.redirect('/cr/loginAccn');
+        }) ; 
+        
+    })
+} )
 
 exports = module.exports = {
     route

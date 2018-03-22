@@ -1,11 +1,10 @@
 const express = require('express');
 const path = require('path');
-const route = require('./backend/route.js').route ;
+const newAccountRoute = require('./backend/createAccount.js').route ;
+const loginRoute = require('./backend/login.js').route
 
 
 
-
-const PORT = process.env.PORT || 2233 ;
 const app = express();
 
 app.use(express.json())
@@ -25,13 +24,8 @@ app.set('views', __dirname + '/frontend/public')
 app.use('/', express.static(__dirname + '/frontend/public'))
 
 // authentication handler
-app.use('/cr', route)
-
-
-
-
-
-
+app.use('/cr', newAccountRoute)
+app.use('/cr', loginRoute)
 
 
 
@@ -39,6 +33,6 @@ app.use('/cr', route)
 
 
 module.exports = {
-    app , PORT
+    app 
 }
 

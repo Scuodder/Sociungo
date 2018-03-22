@@ -11,6 +11,9 @@ const userSchema = new Schema({
     },
     birthday : String,
     password : String,
+    secretToken : String,
+    active : Boolean,
+
 
 });
 

@@ -1,5 +1,5 @@
 const app = require('./server.js').app
-const PORT = require('./server.js').PORT
+const PORT = require('./port.js').PORT
 const mongoose = require('mongoose');
 const credentials = require('./temp/credentials.js').mlabLogin;
 
