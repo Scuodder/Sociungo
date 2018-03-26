@@ -1,34 +1,37 @@
 // create a new account
 $(function(){
-    let firstName = $('#firstName');
-    let lastName = $('#lastName');
-    let emailAddress = $('#emailAddress');
-    let password = $('#password');
-    let confirmPassword = $('#confirmPassword')
-    let birthday = $('#birthday');
-    let signIn = $('#signIn')
-    let create = $('#createAccount');
-
+    
     let errorContainer = $('#errors')
     
-
-  
     // signIN
-    signIn.click(function(){
-    
-        window.open(window.location.href + 'cr/loginAccn','_self')
+   
+    document.getElementById('signIn').addEventListener('click', function(e) {
+        
+        $.post('/cr/loginAccn',{
+            emailAddress : $('#inputEmail').val(),
+            password : $('#inputPassword').val()
+        } , function(response) { 
+            console.log(response)
+            //   window.open(window.location.href + '','_self')
+            
+        })
+         /// prevent default action of signIn button..
+        e.preventDefault();
     })
 
-    create.click(function(){
+  
+    // createAccount
+
+    document.getElementById('createAccount').addEventListener('click', function(e) {
         $.post (
             '/cr/createAccn', 
             {
-                firstName : firstName.val(),
-                lastName : lastName.val(),
-                emailAddress : emailAddress.val(),
-                password : password.val(),
-                confirmPassword: confirmPassword.val(),
-                birthday : birthday.val() ,
+                firstName : $('#firstName').val(),
+                lastName : $('#lastName').val(),
+                emailAddress : $('#emailAddress').val(),
+                password : $('#password').val(),
+                confirmPassword: $('#confirmPassword').val(),
+                birthday : $('#birthday').val() ,
 
             }, function(data) {
               console.log(data)
@@ -82,8 +85,10 @@ $(function(){
                 
             }
         )
-        }
-     )
+        e.preventDefault();
+    })
+
+
 
     
 

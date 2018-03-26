@@ -36,9 +36,10 @@ function outsideClick(e) {
     if (e.target==modal){
         modal.style.display = 'none'
     }
-//    e.preventDefault();
+
 }
 
-createAccountButton.addEventListener('click', function (e) {
-    e.preventDefault();
-})
+
+
+
+
