@@ -9,7 +9,7 @@ let modalBtn = document.getElementById('createAccn');
 
 let closeBtn = document.getElementsByClassName('closeBtn')[0] ;
 
-let createAccountButton = document.getElementById('createAccount');
+
 //click open
 modalBtn.addEventListener('click', openModal )
 //click close
@@ -33,7 +33,7 @@ function closeModal () {
 }
 
 function outsideClick(e) {
-    if (e.target==modal){
+    if (e.target === modal){
         modal.style.display = 'none'
     }
 
