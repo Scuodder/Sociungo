@@ -36,7 +36,7 @@ existingUser(req.body, function(found) {
     if(!found) {
 
 // calculating random string and active state of the user is false,
-randString = randomstring.generate()
+let randString = randomstring.generate()
 req.body.secretToken = randString ;
 req.body.active = false ;
 

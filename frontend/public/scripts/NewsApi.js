@@ -18,9 +18,9 @@
         image = data.articles[i].urlToImage,renderImg;
         
 
-        if(author===null) author = 'unknown';
+        if(author === null) author = 'unknown';
         if(description===null) description = "";
-        if(image==null) {
+        if(image === null) {
             renderImg =``
         } else {
             renderImg = `<img src=${image} class = "rounded imgStyling"  ></img>`
