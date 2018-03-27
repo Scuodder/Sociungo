@@ -2,27 +2,6 @@
 $(function(){
     
     let errorContainer = $('#errors')
-    
-    // signIN
-   
-    document.getElementById('signIn').addEventListener('click', function(e) {
-        
-        $.post('/cr/loginAccn',{
-            emailAddress : $('#inputEmail').val(),
-            password : $('#inputPassword').val()
-        } , function(response) { 
-            let title = response.split('<title>')[1].split('</title>')[0]
-            if ( title === 'Sociungo') {
-                window.open( window.location.href, '_self')
-            } else if (title === 'Profile') {
-                window.open(window.location.href + 'cr/loginAccn','_self')
-            }
-         
-            
-        })
-         /// prevent default action of signIn button..
-        e.preventDefault();
-    })
 
   
     // createAccount
