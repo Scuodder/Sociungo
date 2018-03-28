@@ -19,7 +19,7 @@
         
 
         if(author === null) author = 'unknown';
-        if(description===null) description = "";
+        if(description === null) description = "";
         if(image === null) {
             renderImg =``
         } else {

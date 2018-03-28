@@ -1,14 +1,19 @@
 const User = require('./userSchema.js');
-
+const bcrypt = require('bcrypt')
+const saltRounds = 10;
 
 module.exports = {
+
     createAccount : function (data, callback) {
-        const newUser = new User ({
+        bcrypt.hash(data.password, saltRounds, function(err, hash) {
+            if (err) { throw err }
+           
+            const newUser = new User ({
             firstName : data.firstName,
             lastName : data.lastName,
             emailAddress : data.emailAddress,
             birthday : data.birthday,
-            password : data.password,
+            password : hash,
             secretToken : data.secretToken,
             active : data.active,
            })
@@ -17,7 +22,9 @@ module.exports = {
             if (err) throw err ;
             let confirm;
             callback(confirm);
-        })   
+        })  
+        })
+         
     },
 
     existingUser : async function (data, callback) {
