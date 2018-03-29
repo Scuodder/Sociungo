@@ -8,12 +8,10 @@ $(function(){
     
     $.get("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=19eb4ff1d1654a6cac5106b3087408d3", function(data) {
    
-    processNews(contain, data);    
+        processNews(contain, data);    
+    })
 
-    
-})
-
-    // post request to fetch user
+    // post request to fetch user when the page loads
     $.post('/cr/fetchUser', function(response) {
         console.log(response)
         $('#userFirstName').append(
@@ -44,8 +42,8 @@ nHome.click(function() {
             <div class="jumbotron">
                 <div class="container">
                     <h1 class="display-4">Status</h1>
-                    <div id="status">
-                        <p class="lead" >Add your status</p>
+                    <div>
+                        <p id="status" class="lead text-dark bg-light rounded py-3 px-3" >Add your status</p>
                     </div>
                     
                     <div class="input-group ">
