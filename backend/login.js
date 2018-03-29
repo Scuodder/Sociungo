@@ -1,7 +1,6 @@
 const route = require('express').Router()
 const passport = require('./passportConfig.js').passport
 
-
 route.get('/loginAccn', function(req, res) {
     
     if(req.user) {
@@ -19,6 +18,11 @@ route.post('/loginAccn', passport.authenticate('local', {
     successRedirect : '/cr/loginAccn'
 })
 )
+
+
+route.post('/fetchUser', function(req, res) {
+    res.send(req.user.firstName)
+})
 
 exports = module.exports = {
     route

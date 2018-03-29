@@ -30,11 +30,11 @@
         container.empty();
         container.append($(`
         ${renderImg}
-        <h4 class="p-2 textStyling">${title}</h4>
-        <p class="lead p-2 textStyling" >${description}</p> 
-        <span class="p-2"> #Source-${source}</span> <br>
-        <span class="p-2"> #Author-${author}</span> <br>
-        <a href=${site} class="p-2 textStyling">Visit</a> 
+        <h4 class="p-2 text-light">${title}</h4>
+        <p class="lead p-2 text-light" >${description}</p> 
+        <span class="p-2 text-light"> #Source-${source}</span> <br>
+        <span class="p-2 text-light"> #Author-${author}</span> <br>
+        <a href=${site} class="p-2 text-light">Visit</a> 
         
         `))
     }

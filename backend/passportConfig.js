@@ -18,7 +18,12 @@ passport.deserializeUser(function(emailAddress, done) {
         if (!user) {
             return done(new Error('User not found'))
         }
-        return done(null, user);
+        return done(null, {
+            firstName : user.firstName,
+            emailAddress : user.emailAddress,
+            birthday: user.birthday,
+            active: user.active
+        });
     }).catch(function(err) {
         done(err);  // handle error from database
     })
