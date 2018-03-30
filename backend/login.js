@@ -28,7 +28,7 @@ route.post('/fetchUser', function(req, res) {
 })
 
 // responsing with status when page loads
-route.get('/changeStatus', function(req, res) {
+route.post('/loadStatus', function(req, res) {
     User.findOne({
         emailAddress : req.user.emailAddress
     }).then(function(doc) {

@@ -19,3 +19,7 @@
 .textStyling {
     text-shadow: 0px 0px 0.5px black;
 }
+
+.statusBox {
+    background-color: rgba(7, 6, 6, 0.966)
+}

@@ -11,26 +11,28 @@ function changeStatus(){
     
     let changeStatusInputVal = changeStatusInput.val() ;
     
-    $.post('/cr/changeStatus', {
+    if (changeStatusInputVal!=="") {
+        $.post('/cr/changeStatus', {
         status : changeStatusInputVal
     }, function(response) {
-  
-    if (changeStatusInputVal!=="") {
-        status.empty();
+         status.empty();
         status.append(`${response}`);
         changeStatusInput.val("");
-      }
     })
+ 
+    }
 
-    // get request to fetch status when homepage loads
-    $.get('/cr/changeStatus', function(response) {
+   
+    })
+    // post request to fetch status when homepage loads
+    $.post('/cr/loadStatus',{},function(response) {
         if (response!=="") {
             status.empty();
             status.append(`${response}`);
             changeStatusInput.val("");
           }
     })  
-    })
+
 }
 
 changeStatus();

@@ -38,39 +38,45 @@ nHome.click(function() {
     dynamicPage.append($(`
     <div class="row">
                     
-        <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2"> 
-            <div class="jumbotron">
-                <div class="container">
-                    <h1 class="display-4">Status</h1>
-                    <div>
-                        <p id="status" class="lead text-dark bg-light rounded py-3 px-3" >Add your status</p>
+    <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2 "> 
+        <div class="jumbotron">
+            <div class="container">
+                <span class="display-4 bg-light rounded text-dark py-1 px-3" >Status</span>
+                <div class="mt-3">
+                    <p id="status" class="lead text-dark bg-light rounded py-3 px-3" >Add your status</p>
+                </div>
+                
+                <div class="input-group ">
+                    <div class="input-group-prepend" id="changeStatusButton">
+                        <button class="btn btn-dark" >Add status</button>
                     </div>
+                    <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
                     
-                    <div class="input-group ">
-                                    <div class="input-group-prepend" id="changeStatusButton">
-                                        <button class="btn btn-danger"> Add status</button>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
-                    </div>
-
-                </div>
+                    
+                </div>   
+                
+                
+                
             </div>
         </div>
-    
     </div>
-
-    <div class="row">
     
-        <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
-            <div class="jumbotron">
-                <div class="container">
-                    <h1 class="display-4  " >Feed</h1>
-                    <p class="lead ">No feed</p>
-                </div>
+</div>
+
+<div class="row">
+    
+    <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
+        <div class="jumbotron bg-dark">
+            <div class="container">
+                <span class="display-4 bg-light rounded px-3 py-1 text-dark" >Feed</span>
+                <p class="lead ml-1 mt-5 text-light">No feed</p>
             </div>
         </div>
-        
     </div>
+    
+</div>
+</div>
+
     
     `))
 

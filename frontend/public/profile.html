@@ -27,20 +27,20 @@
         </a>
         
         <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" id="nHome">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="nProfile">Profile</a>
-                </li>
-                <li class="nav-item"> 
-                    <a href="#" class="nav-link " id="nSettings">Settings</a>
-                </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link active" id="nHome">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="nProfile">Profile</a>
+            </li>
+            <li class="nav-item"> 
+                <a href="#" class="nav-link " id="nSettings">Settings</a>
+            </li>
         </ul>
         
-            <i class="fas fa-user-circle mr-2 text-light fa-lg"></i>
-            <p id="userFirstName" class="text-light my-2 mr-3"></p>
-    
+        <i class="fas fa-user-circle mr-2 text-light fa-lg"></i>
+        <p id="userFirstName" class="text-light my-2 mr-3"></p>
+        
         
         <form class="form-inline">
             <input placeholder="Search" type="search" class="form-control mr-sm-2 " aria-label="Search"> 
@@ -58,11 +58,11 @@
             
             <div class="col-7  m-3 p-2" id = "dynamicPage">
                 
-              
+                
                 <div class="row">
                     
                     <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2 "> 
-                        <div class="jumbotron bg-info">
+                        <div class="jumbotron statusBox">
                             <div class="container">
                                 <span class="display-4 bg-light rounded text-dark py-1 px-3" >Status</span>
                                 <div class="mt-3">
@@ -74,30 +74,30 @@
                                         <button class="btn btn-dark" >Add status</button>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
-                                   
-
+                                    
+                                    
                                 </div>   
                                 
                                 
-                               
+                                
                             </div>
                         </div>
                     </div>
                     
                 </div>
-
+                
                 <div class="row">
                     
-                        <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
-                            <div class="jumbotron bg-dark">
-                                <div class="container">
-                                    <span class="display-4 bg-light rounded px-3 py-1 text-dark" >Feed</span>
-                                    <p class="lead ml-1 mt-5 text-light">No feed</p>
-                                </div>
+                    <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
+                        <div class="jumbotron bg-dark">
+                            <div class="container">
+                                <span class="display-4 bg-light rounded px-3 py-1 text-dark" >Feed</span>
+                                <p class="lead ml-1 mt-5 text-light">No feed</p>
                             </div>
                         </div>
-                        
                     </div>
+                    
+                </div>
             </div>
             
             <!--News  -->
@@ -115,12 +115,12 @@
                     
                     <div class="jumbotron bg-dark pt-4 pl-1 pr-1" id="news">
                         <div class="container">
-                    <a href ="#" id="post_fetch" class="badge badge-info px-2 py-1">Next</a>
-                    <div class="bg-light py-2 mb-2 mt-3 text-center rounded ">
-                                                    
-                        <span class="display-4 lead text-dark">News</span><a href="https://newsapi.org/"class="badge badge-danger">News API</a> 
-                    </div> 
-                    
+                            <a href ="#" id="post_fetch" class="badge badge-info px-2 py-1">Next</a>
+                            <div class="bg-light py-2 mb-2 mt-3 text-center rounded ">
+                                
+                                <span class="display-4 lead text-dark">News</span><a href="https://newsapi.org/"class="badge badge-danger">News API</a> 
+                            </div> 
+                            
                             
                             <div class="mb-2" id="contain"></div>  
                         </div>
@@ -135,7 +135,7 @@
     </div>
     
     
-
+    
     <footer class="navbar navbar-dark foot fixed-bottom">
         
         <span class=" text-light">
@@ -147,7 +147,7 @@
         </span>
         
     </footer>
-
+    
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
