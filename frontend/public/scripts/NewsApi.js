@@ -31,10 +31,13 @@
         container.append($(`
         ${renderImg}
         <h4 class="p-2 mt-3 bg-light rounded text-dark">${title}</h4>
-        <p class="lead p-2 text-light" >${description}</p> 
-        <span class="p-2  text-light"> #Source-${source}</span> </br>
-        <span class="p-2  text-light"> #Author-${author}</span> </br></br>
-        <a href=${site} class="px-2 py-1 ml-2 bg-info rounded text-light">Visit</a> 
-        
+        <div class = "bg-light mb-2 rounded text-dark">
+            <p class="lead p-2 m-0 text-dark" >${description}</p> 
+        </div>
+        <div class = "bg-light mb-2 p-2 rounded">
+            <span class="lead text-dark "> #Source-${source}</span> </br>
+            <span class="lead text-dark"> #Author-${author}</span> </br>
+        </div>
+        <a href=${site} class="px-2 py-1 bg-info rounded text-light">Visit</a>
         `))
     }

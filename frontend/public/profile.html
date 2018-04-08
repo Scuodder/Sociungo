@@ -61,17 +61,18 @@
                 
                 <div class="row">
                     
-                    <div class="col-12 mt-0 ml-3 mr-3 mb-0 p-2 "> 
-                        <div class="jumbotron statusBox">
+                    <div class="col-12 mt-5 ml-3 mr-3 mb-5 p-5 rounded" id="boxStyle1"> 
+                        <div class="bg-transparent" >
                             <div class="container">
-                                <span class="display-4 bg-light rounded text-dark py-1 px-3" >Status</span>
-                                <div class="mt-3">
-                                    <p id="status" class="lead text-dark bg-light rounded py-3 px-3" >Add your status</p>
+                                <span class="display-4 rounded text-light py-1 px-3 customColor" >Status</span>
+                                
+                                <div class="mt-4">
+                                    <p id="status" class="lead text-dark bg-light rounded py-4 px-3" >Add your status</p>
                                 </div>
                                 
-                                <div class="input-group ">
+                                <div class="input-group mt-4">
                                     <div class="input-group-prepend" id="changeStatusButton">
-                                        <button class="btn btn-dark" >Add status</button>
+                                        <button class="btn btn-info btn-lg" >Add status</button>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Status" id="changeStatusInput">
                                     
@@ -88,11 +89,11 @@
                 
                 <div class="row">
                     
-                    <div class="col-12 mt-0 ml-3 mr-3 mb-3 p-2"> 
-                        <div class="jumbotron bg-dark">
+                    <div class="col-12 mt-5 ml-3 mr-3 mb-3 p-5" id="boxStyle2"> 
+                        <div class="bg-transparent">
                             <div class="container">
-                                <span class="display-4 bg-light rounded px-3 py-1 text-dark" >Feed</span>
-                                <p class="lead ml-1 mt-5 text-light">No feed</p>
+                                <span class="display-4 customColor rounded px-3 py-1 text-light" >Feed</span>
+                                <p class="lead mt-4 bg-light text-dark rounded py-1 px-3 text-light">No feed</p>
                             </div>
                         </div>
                     </div>
@@ -102,8 +103,8 @@
             
             <!--News  -->
             
-            <div class="col-4">
-                <div class=" mr-0 mt-3 mb-3 ml-3 p-2 ">
+            <div class="col-4 mb-4">
+                <div class=" mr-0 mt-4 mb-0 ml-3 p-2 ">
                     <span class="badge badge-primary">Friends</span>
                     <span class="badge badge-success">Groups</span>
                     <span class="badge badge-warning">Followers</span>
@@ -111,14 +112,13 @@
                 </div>
                 
                 
-                <div class=" mr-0 mt-3 mb-3 ml-3 p-2">
+                <div class=" mr-0 mb-3 ml-3 p-2">
                     
-                    <div class="jumbotron bg-dark pt-4 pl-1 pr-1" id="news">
+                    <div class="pt-4 pl-1 pr-1" id="news">
                         <div class="container">
-                            <a href ="#" id="post_fetch" class="badge badge-info px-2 py-1">Next</a>
-                            <div class="bg-light py-2 mb-2 mt-3 text-center rounded ">
-                                
-                                <span class="display-4 lead text-dark">News</span><a href="https://newsapi.org/"class="badge badge-danger">News API</a> 
+                            <a href ="#" id="post_fetch" class="badge badge-info px-2 py-1">Next</a> <a href="https://newsapi.org/"class="badge py-1 px-2 badge-danger">News API</a> 
+                            <div class="py-2 mb-2 mt-3 text-center rounded customColor">
+                                <span class="display-4 lead text-light">News</span>
                             </div> 
                             
                             

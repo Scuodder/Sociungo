@@ -2,7 +2,7 @@
 
 
 .back {
-    background-image: url("../assets/dark-blue-Wallpaper-Picture-number-au7.jpg");
+    background-image: url("https://i.imgur.com/MJeQFSy.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -20,6 +20,15 @@
     text-shadow: 0px 0px 0.5px black;
 }
 
-.statusBox {
-    background-color: rgba(7, 6, 6, 0.966)
+#boxStyle1 {
+    background-color: rgba(240, 255, 255, 0);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.534);
+}
+#boxStyle2 {
+    background-color: rgba(240, 255, 255, 0);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.534);
+}
+
+.customColor {
+    background-color: rgb(69, 112, 148)
 }
